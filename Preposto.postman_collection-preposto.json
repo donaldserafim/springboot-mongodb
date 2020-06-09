@@ -1,0 +1,970 @@
+{
+	"info": {
+		"_postman_id": "f0c27296-d996-4911-b7be-6fcf0b55d75b",
+		"name": "Preposto",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Estado",
+			"item": [
+				{
+					"name": "Inserir",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\":\"São Paulo\",\n\t\"sigla\":\"SP\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/estado/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"estado",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\":\"Santa Catarina\",\n\t\"sigla\":\"SC\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/estado/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"estado",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\":\"Santa Catarina\",\n\t\"sigla\":\"SC\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/estado/5ede7a4960fa4832f77c74d3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"estado",
+								"5ede7a4960fa4832f77c74d3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\":\"Santa Catarina\",\n\t\"sigla\":\"SC\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/estado/5ede7a4960fa4832f77c74d3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"estado",
+								"5ede7a4960fa4832f77c74d3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"id\": \"5ede74be394b2f203972f163\",\n        \"nome\": \"Parana\",\n        \"sigla\": \"PR\"\n    }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/estado/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"estado",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Oportunidade",
+			"item": [
+				{
+					"name": "Inserir",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"titulo\":\"Preposto em Joinville\",\n\t\"descricao\":\"Precisamos de um Preposto em joinville para representar a empresa em uma audiencia\",\n\t\"valor\": 20,\n\t\"cidade\": {\n        \"id\": \"5ede84b9357eab4d2038578e\",\n        \"nome\": \"Imbituba\",\n        \"estado\": {\n            \"id\": \"5ede74be394b2f203972f163\",\n            \"nome\": \"Parana\",\n            \"sigla\": \"PR\"\n        }\n    },\n    \"empresa\": {\n        \"id\": \"5ede95cbd90c0a42b3178f42\",\n        \"nome\": \"Nextel Empresa S.A. \",\n        \"cidade\": {\n            \"id\": \"5ede84b9357eab4d2038578e\",\n            \"nome\": \"Imbituba\",\n            \"estado\": {\n                \"id\": \"5ede74be394b2f203972f163\",\n                \"nome\": \"Parana\",\n                \"sigla\": \"PR\"\n            }\n        }\n    }\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/oportunidade/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"oportunidade",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Inserir DTO",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"titulo\": \"Preposto em Imbituba\",\n\t\"descricao\": \"Necessitamos de um Preposto em Florianópolis\",\n\t\"cidadeId\": \"5edf7fd657c41509b2f0d3cf\",\n\t\"empresaId\":\"5edf82f6ddf5c31f97eae34d\",\n\t\"valor\": 20.00\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/oportunidade/dto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"oportunidade",
+								"dto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/oportunidade/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"oportunidade",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\":\"Santa Catarina\",\n\t\"sigla\":\"SC\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/oportunidade/5ede84b9357eab4d2038578e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"oportunidade",
+								"5ede84b9357eab4d2038578e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\":\"Santa Catarina\",\n\t\"sigla\":\"SC\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/oportunidade/5edea2d8ed55e12f5aaf4671",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"oportunidade",
+								"5edea2d8ed55e12f5aaf4671"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\":\"Cláudio Gastão da Rosa Filho JUCA \",\n\t\"oab\":\"OAB/SC 9.284\",\n\t\"cidade\": {\n        \"id\": \"5ede84b9357eab4d2038578e\",\n        \"nome\": \"Imbituba\",\n        \"estado\": {\n            \"id\": \"5ede74be394b2f203972f163\",\n            \"nome\": \"Parana\",\n            \"sigla\": \"PR\"\n        }\n    },\n    \"especialidades\": [\n                    \t\"Civil\",\n                        \"Trabalhista\"\n                      ]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/oportunidade/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"oportunidade",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Empresa",
+			"item": [
+				{
+					"name": "Inserir",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\":\"Nextel Empresa S.A. \",\n\t\"cidade\": {\n        \"id\": \"5ede84b9357eab4d2038578e\",\n        \"nome\": \"Imbituba\",\n        \"estado\": {\n            \"id\": \"5ede74be394b2f203972f163\",\n            \"nome\": \"Parana\",\n            \"sigla\": \"PR\"\n        }\n    }\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/empresa/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"empresa",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Inserir DTO",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\":\"Projuris S.A. \",\n\t\"cidadeId\": \"5edf7fd657c41509b2f0d3cf\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/empresa/dto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"empresa",
+								"dto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/empresa/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"empresa",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\":\"Santa Catarina\",\n\t\"sigla\":\"SC\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/empresa/5ede84b9357eab4d2038578e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"empresa",
+								"5ede84b9357eab4d2038578e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\":\"Santa Catarina\",\n\t\"sigla\":\"SC\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/empresa/5edea16bd4c36c44061cdb9c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"empresa",
+								"5edea16bd4c36c44061cdb9c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n        \"id\": \"5edf8303ddf5c31f97eae34e\",\n        \"nome\": \"Nextel S.A. \",\n        \"cidade\": {\n            \"id\": \"5edf7fd657c41509b2f0d3cf\",\n            \"nome\": \"Florianopolis\",\n            \"estado\": {\n                \"id\": \"5ede74f0394b2f203972f164\",\n                \"nome\": \"Santa Catarina\",\n                \"sigla\": \"SC\"\n            }\n        }\n    }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/empresa/5edf8303ddf5c31f97eae34e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"empresa",
+								"5edf8303ddf5c31f97eae34e"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Cidade",
+			"item": [
+				{
+					"name": "Inserir",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\":\"Imbituba\",\n\t\"estado\":\n\t{\n        \"id\": \"5ede74be394b2f203972f163\",\n        \"nome\": \"Parana\",\n        \"sigla\": \"PR\"\n    }\n}\n"
+						},
+						"url": {
+							"raw": "http://localhost:8080/cidade/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cidade",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Inserir DTO",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\":\"Florianopolis\",\n\t\"estadoId\": \"5ede74f0394b2f203972f164\"\n}\n"
+						},
+						"url": {
+							"raw": "http://localhost:8080/cidade/dto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cidade",
+								"dto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/cidade/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cidade",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\":\"Santa Catarina\",\n\t\"sigla\":\"SC\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/cidade/5ede7a4960fa4832f77c74d3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cidade",
+								"5ede7a4960fa4832f77c74d3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/cidade/5ede74be394b2f203972f163",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cidade",
+								"5ede74be394b2f203972f163"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/cidade/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cidade",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Advogado",
+			"item": [
+				{
+					"name": "Inserir",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\":\"Cláudio Gastão da Rosa Filho JUCA \",\n\t\"oab\":\"OAB/SC 9.284\",\n\t\"cidade\": {\n        \"id\": \"5ede84b9357eab4d2038578e\",\n        \"nome\": \"Imbituba\",\n        \"estado\": {\n            \"id\": \"5ede74be394b2f203972f163\",\n            \"nome\": \"Parana\",\n            \"sigla\": \"PR\"\n        }\n    },\n    \"especialidades\": [\n                    \t\"Civil\",\n                        \"Trabalhista\"\n                      ]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/advogado/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"advogado",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Inserir DTO",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\":\"Viviane Martins da Silva de Oliveira \",\n\t\"oab\":\"OAB/SC 9.270\",\n\t\"cidadeId\":\"5edf7fc157c41509b2f0d3ce\",\n    \"especialidades\": [\n                    \t\"Trabalhista\"\n                      ]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/advogado/dto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"advogado",
+								"dto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/advogado/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"advogado",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\":\"Santa Catarina\",\n\t\"sigla\":\"SC\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/advogado/5edf809ae8a12028fb693686",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"advogado",
+								"5edf809ae8a12028fb693686"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\":\"Santa Catarina\",\n\t\"sigla\":\"SC\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/advogado/5ede9205ee3e5c6477444558",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"advogado",
+								"5ede9205ee3e5c6477444558"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"5edf809ae8a12028fb693686\",\n    \"nome\": \"Cláudio Gastão da Rosa Filho\",\n    \"oab\": \"OAB-SC 9.284\",\n    \"cidade\": {\n        \"id\": \"5edf7fd657c41509b2f0d3cf\",\n        \"nome\": \"Florianopolis\",\n        \"estado\": {\n            \"id\": \"5ede74f0394b2f203972f164\",\n            \"nome\": \"Santa Catarina\",\n            \"sigla\": \"SC\"\n        }\n    },\n    \"especialidades\": [\n        \"Criminal\",\n        \"Trabalhista\"\n    ]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/advogado/5edf809ae8a12028fb693686",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"advogado",
+								"5edf809ae8a12028fb693686"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Pesquisa",
+			"item": [
+				{
+					"name": "PesquisarOportunidades Por Cidade",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/pesquisa/cidade/5edf7fd657c41509b2f0d3cf",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pesquisa",
+								"cidade",
+								"5edf7fd657c41509b2f0d3cf"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PesquisarOportunidades Por Cidade e Min  e Max",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"cidadeId\": \"5edf7fd657c41509b2f0d3cf\",\n\t\"valorMinimo\": 19.99,\n\t\"valorMaximo\": 20.01\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/pesquisa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pesquisa"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
